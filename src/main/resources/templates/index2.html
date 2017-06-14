@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" type="text/css" href="../static/css/lib/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="../static/css/public.css">
+    <script type="text/javascript" src="../static/js/lib/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="../static/js/lib/bootstrap.js"></script>
+    <script type="text/javascript" src="../static/js/lib/jquery-3.2.1.min.js"></script>
+</head>
+<body>
+    <div class="top"></div>
+    <div class="mid">
+        <a>这是中间部分</a>
+    </div>
+    <div class="bottom"></div>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('.top').load('./public/top.html');
+            $('.bottom').load('./public/bottom.html');
+        });
+    </script>
+</body>
+</html>
