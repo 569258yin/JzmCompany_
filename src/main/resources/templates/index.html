@@ -1,112 +1,25 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <meta charset="utf-8">
-    <title>主页</title>
-
-    <link rel="stylesheet" type="text/css" href="../static/css/content/cube.css"/>
-    <link rel="stylesheet" type="text/css" href="../static/css/content/font-awesome.min.css"/>
-    <link rel="stylesheet" type="text/css" href="../static/css/content/page.css"/>
-    <link rel="stylesheet" type="text/css" href="../static/css/content/173.css"/>
-    <link rel="stylesheet" type="text/css" href="../static/css/content/grid.css"/>
-
-    <script type="text/javascript" src="../static/js/lib/jquery-3.2.0.slim.min.js"></script>
-    <script type="text/javascript" src="../static/js/lib/bootstrap.min.js"></script>
-    <script type="text/javascript" src="../static/js/lib/jquery-1.10.2.min.js"></script>
-    <script type="text/javascript" src="../static/js/lib/jquery.modal.min.js"></script>
-
-    <style type="text/css">body {
-        background-color: #ffffff;
-        background-image: none;
-        background-repeat: Repeat;
-        background-position: center;
-        background-attachment: scroll;
-    }</style>
-    <style type="text/css">
-
-        .page-wrap {
-            height: auto;
-            top: auto;
-            bottom: auto;
-            overflow: hidden;
-        }
-    </style>
-
+    <meta charset="UTF-8">
+    <title>威海金子木渔具有限责任公司</title>
+    <link rel="stylesheet" type="text/css" href="../static/css/lib/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="../static/css/public.css">
+    <script type="text/javascript" src="../static/js/lib/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="../static/js/lib/bootstrap.js"></script>
 </head>
-<body class="doc-body">
-    <div class="mod-fullcolumn-inner">
-        <div class="widget-wrap  " id="navigate_83_115" data-panels="Style,Content"
-             tabindex="-1">
-            <div class="widget-container navigate_Style1 navigate_83_115_Style1_customcss">
-                <div class="mod-nav-wrap" id="navigate_83_115_wrap">
-                    <ul class=mod-nav>
-                        <li class=mod-nav-item>
-                            <div class="mod-nav-title">
-                                <a href="/index" target="_self" class="mod-nav-link">
-                                    首页
-                                </a>
-                            </div>
-                        </li>
-                        <li class=mod-nav-item>
-                            <div class="mod-nav-title">
-                                <a href="/gywm" target="_self" class="mod-nav-link">
-                                    关于我们
-                                </a>
-                            </div>
-                        </li>
-                        <li class=mod-nav-item>
-                            <div class="mod-nav-title">
-                                <a href="/cpzs" target="_self" class="mod-nav-link">
-                                    产品展示
-                                </a>
-                            </div>
-                        </li>
-                        <li class=mod-nav-item>
-                            <div class="mod-nav-title">
-                                <a href="/xwzx" target="_self" class="mod-nav-link">
-                                    新闻中心
-                                </a>
-                            </div>
-                        </li>
-                        <li class=mod-nav-item>
-                            <div class="mod-nav-title">
-                                <a href="/rlzy" target="_self" class="mod-nav-link">
-                                    人力资源
-                                </a>
-                            </div>
-                        </li>
-                        <li class=mod-nav-item>
-                            <div class="mod-nav-title">
-                                <a href="/lxwm" target="_self" class="mod-nav-link">
-                                    联系我们
-                                </a>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-        <div class="widget-wrap  " id="image_88_115" data-panels="Style,Content,Interaction"
-             tabindex="-1">
-            <div class="widget-container image_Style1 image_88_115_Style1_customcss">
-                <div class="mod-image-wrap">
-
-                    <!--mod-image-->
-                    <span class="mod-image">
-                <div class="mod-image-img" >
-                        <img imagemode="origin" src="../static/images/20170608131234167.png" height="49px"/>
-                </div>
-                <div class="mod-image-mark mark-hide">
-                    <div class="mod-image-pack">
-                        <div class="mod-image-icon mark-hide"><i class="fa"></i></div>
-                        <div class="mod-image-title "></div>
-                    </div>
-                </div>
-            </span>    <!--/mod-image-->
-
-                </div>
-            </div>
-        </div>
+<body>
+    <div class="top"></div>
+    <div class="mid">
+        <a>这是中间部分</a>
     </div>
+    <div class="bottom"></div>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('.top').load('./public/top.html');
+            $('.bottom').load('./public/bottom.html');
+        });
+    </script>
 </body>
 </html>

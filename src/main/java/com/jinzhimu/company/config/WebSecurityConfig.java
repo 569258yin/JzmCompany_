@@ -27,13 +27,13 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
     @Override
     protected void configure(HttpSecurity http) throws Exception {
         http.authorizeRequests()
-                .anyRequest().authenticated()
+//                .anyRequest().authenticated()  //对所有请求都需要验证权限
                 .antMatchers("/templates/admin/**").hasRole("ADMIN")
-                .antMatchers("/templates/public/**","/templates/index.html").permitAll()
+                .antMatchers("/templates/public/**","/").anonymous()
                 .and()
                 .formLogin().loginPage("/login")
                 //设置默认登录成功跳转页面
-                .defaultSuccessUrl("/admin/index").failureUrl("/login?error").permitAll()
+                .defaultSuccessUrl("/templates/admin/index").failureUrl("/login?error").permitAll()
                 .and()
                 //开启cookie保存用户数据
                 .rememberMe()
