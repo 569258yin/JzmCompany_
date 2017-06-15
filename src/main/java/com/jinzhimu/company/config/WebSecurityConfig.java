@@ -27,8 +27,8 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
     @Override
     protected void configure(HttpSecurity http) throws Exception {
         http.authorizeRequests()
-//                .anyRequest().authenticated()  //对所有请求都需要验证权限
-                .antMatchers("/templates/admin/**").hasRole("ADMIN")
+//                .anyRequest().authenticated()  //对所有请求都需要验证权限.hasRole("ADMIN")
+                .antMatchers("/templates/admin/**","/admin/index").anonymous()
                 .antMatchers("/templates/public/**","/").anonymous()
                 .and()
                 .formLogin().loginPage("/login")

@@ -4,7 +4,7 @@ body{
 }
 
 .title{
-    background-image: url("../images/bgImg.jpg");
+    background-image: url("/images/bgImg.jpg");
     width: 1300px;
     height: 90px;
     padding:0;

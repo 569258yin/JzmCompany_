@@ -2,9 +2,31 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>管理员界面</title>
+    <!-- 引入JQuery -->
+    <script type="text/javascript" src="../easyui-1.5.2/jquery.min.js"></script>
+    <!-- 引入EasyUI -->
+    <script type="text/javascript" src="../easyui-1.5.2/jquery.easyui.min.js"></script>
+    <!-- 引入EasyUI的中文国际化js，让EasyUI支持中文 -->
+    <script type="text/javascript" src="../easyui-1.5.2/locale/easyui-lang-zh_CN.js"></script>
+    <!-- 引入EasyUI的样式文件-->
+    <link rel="stylesheet" href="../easyui-1.5.2/themes/default/easyui.css" type="text/css"/>
+    <!-- 引入EasyUI的图标样式文件-->
+    <link rel="stylesheet" href="../easyui-1.5.2/themes/icon.css" type="text/css"/>
 </head>
 <body>
-管理员界面
+<div class="easyui-layout" style="width:400px;height:200px;">
+    <div region="west" split="true" title="Navigator" style="width:150px;">
+        <p style="padding:5px;margin:0;">Select language:</p>
+        <ul>
+            <li><a href="javascript:void(0)" onclick="showcontent('java')">Java</a></li>
+            <li><a href="javascript:void(0)" onclick="showcontent('cshape')">C#</a></li>
+            <li><a href="javascript:void(0)" onclick="showcontent('vb')">VB</a></li>
+            <li><a href="javascript:void(0)" onclick="showcontent('erlang')">Erlang</a></li>
+        </ul>
+    </div>
+    <div id="content" region="center" title="Language" style="padding:5px;">
+    </div>
+</div>
 </body>
 </html>

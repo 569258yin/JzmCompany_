@@ -14,4 +14,9 @@ public class ViewController{
         return "index";
     }
 
+    @RequestMapping("/admin/index")
+    public String adminIndex(){
+        return "/admin/index";
+    }
+
 }
