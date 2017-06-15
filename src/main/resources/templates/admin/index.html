@@ -14,18 +14,66 @@
     <!-- 引入EasyUI的图标样式文件-->
     <link rel="stylesheet" href="../easyui-1.5.2/themes/icon.css" type="text/css"/>
 </head>
-<body>
-<div class="easyui-layout" style="width:400px;height:200px;">
-    <div region="west" split="true" title="Navigator" style="width:150px;">
-        <p style="padding:5px;margin:0;">Select language:</p>
-        <ul>
-            <li><a href="javascript:void(0)" onclick="showcontent('java')">Java</a></li>
-            <li><a href="javascript:void(0)" onclick="showcontent('cshape')">C#</a></li>
-            <li><a href="javascript:void(0)" onclick="showcontent('vb')">VB</a></li>
-            <li><a href="javascript:void(0)" onclick="showcontent('erlang')">Erlang</a></li>
-        </ul>
+<body class="easyui-layout">
+
+<!-- 页面头部菜单 -->
+<div id="northTop" data-options="region:'north',title:'North Title',noheader:'true'" style="height:60px;background:url('../images/logo.png') no-repeat bottom left;">
+    <div id="topLinks" style="position: absolute;bottom: 2px;right:2px;border:0px solid red;width: 320px;">
+        <a href="javascript:void(0)" id="mb1" class="easyui-linkbutton" data-options="menu:'#main',iconCls:'house',plain:true">首页</a>
+        <a href="javascript:void(0)" id="mb2" class="easyui-menubutton" data-options="menu:'#Info',iconCls:'user-gray'">个人中心</a>
+        <a href="javascript:void(0)" id="mb3" class="easyui-linkbutton" data-options="menu:'#logOut',iconCls:'application-go',plain:true">注销</a>
     </div>
-    <div id="content" region="center" title="Language" style="padding:5px;">
+    <div id="Info" class="menus" style="width:150px;">
+        <div data-options="iconCls:'vcard'" id="mb5">个人信息维护</div>
+        <div data-options="iconCls:'lock-edit'"  id="mb6">修改登录密码</div>
+    </div>
+
+    <div id="winInformation" style="display:none;">
+        <img src="favicon.ico"/>
+        安阳工学院版<br>
+        &nbsp;&nbsp;&nbsp;Version: 5.6<br>
+        &nbsp;&nbsp;&nbsp;Build id: 5-6-2017-05-10<br>
+        &nbsp;&nbsp;&nbsp;LiYongGang.  All rights reserved.<br>
+        &nbsp;&nbsp;&nbsp;Copyright  &copy; 2014 - 2017;
+
+    </div>
+</div>
+
+
+<!-- 页面左部导航 -->
+<div id="westNav" data-options="region:'west',iconCls:'application-cascade',title:'功能导航',split:false" style="width:230px;">
+    <div id="accordion" class="easyui-accordion" data-options="animate:true,fit:true,border:false">
+        <div title="业务支持" data-options="iconCls:'application-side-tree',selected:true" style="padding:10px;">
+            <<p style="padding:5px;margin:0;">Select language:</p>
+            <ul>
+                <li><a href="javascript:void(0)" onclick="showcontent('java')"></a></li>
+                <li><a href="javascript:void(0)" onclick="showcontent('cshape')">C#</a></li>
+                <li><a href="javascript:void(0)" onclick="showcontent('vb')">VB</a></li>
+                <li><a href="javascript:void(0)" onclick="showcontent('erlang')">Erlang</a></li>
+            </ul>
+        </div>
+        <div title="常用工具" data-options="iconCls:'application-side-list'" style="padding:10px;">
+            <ul id="toolTree"></ul>
+        </div>
+        <div title="系统管理" data-options="iconCls:'application-side-list'" style="padding:10px;">
+            <ul id="sysTree"></ul>
+        </div>
+    </div>
+</div>
+
+
+<div id="content" region="center" style="padding:5px;">
+</div>
+
+
+<!-- 页面底部声明 -->
+<div id="southbottom" data-options="region:'south',title:'South Title',noheader:'true'" style="height:50px;color: #4e5766">
+    <div class="copyright" style="text-align: center;"><br>
+        <a href="javascript:void(0)">反馈建议</a> | <a href="javascript:void(0)">官方微博</a> | <a href="javascript:void(0)">侵权投诉</a> |
+        <a href="javascript:void(0)">Visual SiteBuilder</a>&nbsp;&nbsp;&nbsp;&nbsp;
+        Copyright &copy; 2016 - 2017&nbsp;
+        <a href="javascript:void(0)"> All Rights Reserved.</a>&nbsp;&nbsp;<a href="javascript:void(0)">威海金子木渔具有限公司</a>&nbsp;&nbsp;&nbsp;&nbsp;
+        建议使用 Chrome/Firefox  系列浏览器 1440*900屏幕分辨率
     </div>
 </div>
 </body>
