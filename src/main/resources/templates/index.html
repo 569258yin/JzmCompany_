@@ -3,23 +3,103 @@
 <head>
     <meta charset="UTF-8">
     <title>威海金子木渔具有限责任公司</title>
-    <link rel="stylesheet" type="text/css" href="/css/lib/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="/css/public.css">
-    <script type="text/javascript" src="/js/lib/jquery-3.2.1.min.js"></script>
-    <script type="text/javascript" src="/js/lib/bootstrap.js"></script>
+    <link rel="stylesheet" type="text/css" href="../static/css/lib/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="../static/css/public.css">
+    <link rel="stylesheet" type="text/css" href="../static/css/index.css">
+    <script type="text/javascript" src="../static/js/lib/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="../static/js/lib/bootstrap.js"></script>
 </head>
 <body>
     <div class="top"></div>
-    <div class="mid">
-        <a>这是中间部分</a>
-    </div>
+
+        <div class="containerOne">
+            <div class="oneTop">
+                <hr class="oneTop-line">
+                <div class="oneTop-english">
+                    --------------------------     ABOUT US     --------------------------
+                </div>
+                <div class="oneTop-chinese">
+                    关于我们
+                </div>
+            </div>
+            <p class="oneMain">某某某某金属制品有限公司位于湖南省长沙市长沙县高新经济开发区，是一家专业生产铝型材的企业，公司拥有先进水平的铝型材生产线。公司遵循"诚和创新"的企业精神，加强员工队伍技能培训，强化产品质量监控检测，建立完善的质量管理制度和产品质量检测体系;稳定的产品质量和过硬的售后服务，赢得了广大客户和社会各界的一致好评与青睐。 先进的设备，优良的工艺，雄厚的技术力量和科学管理，保证了产品质量；优质的产品质量和完善的服务，是企业持续发展的保证，我们注重产品质量强化现代化经营和管理意识，不断的开拓进取，让企业的创新理念和优质的服务，诚心成为您永远值得信赖的朋友。</p>
+            <div class="oneImg">
+                <img src="../static/images/oneImg.png" alt="bottomImg">
+            </div>
+        </div>
+
+        <div class="containerTwo">
+            <div class="twoTop"><br/>
+                <hr class="twoTop-line">
+                <div class="twoTop-english">
+                    --------------------------     APRODUCT     --------------------------
+                </div>
+                <div class="twoTop-chinese">
+                    产品展示
+                </div>
+            </div>
+        </div>
+
+        <div class="containerThree">
+            <div class="threeTop"><br/>
+                <hr class="threeTop-line">
+                <div class="threeTop-english">
+                    --------------------------     NEWS     --------------------------
+                </div>
+                <div class="threeTop-chinese">
+                    新闻中心
+                </div>
+            </div>
+            <div class="threeMain">
+                <table border="2">
+                    <tr><td>text</td></tr>
+                    <tr><td>text</td></tr>
+                    <tr><td>text</td></tr>
+                    <tr><td>text</td></tr>
+                    <tr><td>text</td></tr>
+                    <tr><td>text</td></tr>
+                </table>
+            </div>
+        </div>
+
+        <div class="containerFour">
+            <div class="fourTop"><br/>
+                <hr class="fourTop-line">
+                <div class="fourTop-english">
+                    --------------------------     CONTACT     --------------------------
+                </div>
+                <div class="fourTop-chinese">
+                    联系我们
+                </div>
+            </div>
+            <div class="fourMain">
+            <span class="fourMain-one">
+                公司名称：长沙某某某金属制品公司
+            </span>
+                <span class="fourMain-two">
+                公司地址：湖南省长沙市天心区芙蓉南路二段888号
+            </span><br/>
+                <span class="fourMain-three">
+                服务热线：010-88888888
+            </span>
+                <span class="fourMain-four">
+                传真：010-88888888
+            </span>
+            </div>
+        </div>
+
+        <div class="containerFive">
+            <img src="../static/images/fiveImg.png" alt="addressImage">
+        </div>
+
     <div class="bottom"></div>
 
     <script type="text/javascript">
         $(document).ready(function () {
-            $('.top').load('/public/top.html');
-            $('.bottom').load('/public/bottom.html');
+            $('.top').load('./top.html');
+            $('.bottom').load('./bottom.html');
         });
     </script>
+
 </body>
 </html>

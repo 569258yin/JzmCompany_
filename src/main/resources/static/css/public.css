@@ -4,45 +4,55 @@ body{
 }
 
 .title{
-    background-image: url("/images/bgImg.jpg");
-    width: 1300px;
+    background-image: url("../images/bgImg.jpg");
+    width: 100%;
     height: 90px;
     padding:0;
+    margin: 0;
 }
 
 .title .navImg img{
-  margin-top: 20px;
-  margin-left: 200px;
+    margin-top: 20px;
+    margin-left: 200px;
 }
 
 .title .nav{
-  position: relative;
-  float: right;
+    position: relative;
+    float: right;
     margin-top: 20px;
-  right: 100px;
+    right: 100px;
 }
 
 .title .nav:after{
-   text-decoration: none;
+    text-decoration: none;
     clear: both;
 }
 
-.title .nav li a{
-  color: black; 
+.title ul li a{
+    color: black;
+    border-bottom: 0
+}
+
+.title ul{
+    border-bottom: 0;
 }
 
 .post {
     width: 100%;
     height: 350px;
-    margin: 0 auto;
+    margin: 0;
     padding: 0;
 }
 
+.post .carousel{
+    width:100%;
+}
+
 .post .carousel .carousel-inner .item img{
-  width: 100%;
-  height: 350px;
+    width: 100%;
+    height: 350px;
 }
 
 .navbar{
-color: white;
+    color: white;
 }

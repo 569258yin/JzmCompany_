@@ -1,45 +1,6 @@
 body{
     padding: 0;
     margin:0;
-    background-color: black;
-}
-.header{
-    width: 100%;
-   height: 150px;
-   background-color: red;
-}
-
-.header  .title{
-    width: 70%;
-    height: 100%;
-    margin: 0 auto;
-}
-
-.header .title .company-logo img{
-    width:80px;
-    height:80px;
-   border-radius: 50%; 
-   vertical-align: center;
-   margin-top: 10px;
-}
-
-.header .title .company-info img{
-   width:300px;
-    height:30px;
-   vertical-align: center;
-   margin-top: 30px;
-   margin-left: 30px;
-}
-
-.header .title .research input{
-    position: relative;
-    float: right;
-    bottom: 20px;
-}
-
-.navbar{
-    margin: 0;
-   margin-left: 350px;
 }
 
 .post {
@@ -70,26 +31,106 @@ body{
     float: right;
 }
 
-
-.carouselBox{
-    width: 70%;
-    margin:0 auto;
+.containerOne{
+    width: 80%;
+    margin: 0 auto;
+    font-family:'microsoft Yahei';
+    font-size: 30px;
 }
 
-.footer{
-    width: 70%;
-    margin:0 auto;
-}
-
-.footer .bottom-link ul li{
-    list-style-type: none;
-    display: inline;
-
-}
-
-.footer .bottom-info{
-     color: white;
-    position: relative;
-    float: right;
+.containerOne .oneTop{
     text-align: center;
 }
+
+.containerOne .oneTop .oneTop-line{
+    width: 80px;
+    background-color: green;
+    height: 5px;
+}
+
+.containerOne .oneMain{
+    font-size: 20px;
+    margin-top: 30px;
+    line-height: 50px;
+}
+
+.containerOne .oneImg img{
+    width: 100%;
+    margin-top: 50px;
+    margin-bottom: 30px;
+}
+
+.containerTwo{
+    width: 100%;
+    height: 600px;
+    font-family:'microsoft Yahei';
+    font-size: 30px;
+    background-image: url("../images/bgTwo.jpg");
+}
+
+.containerTwo .twoTop{
+    text-align: center;
+}
+
+.containerTwo .twoTop .twoTop-line{
+    width: 80px;
+    background-color: white;
+    height: 5px;
+    margin-top: 30px;
+}
+
+
+.containerThree{
+    width: 80%;
+    margin: 0 auto;
+    font-family:'microsoft Yahei';
+    font-size: 30px;
+}
+
+.containerThree .threeTop{
+    text-align: center;
+}
+
+.containerThree .threeTop .threeTop-line{
+    width: 80px;
+    background-color: green;
+    height: 5px;
+}
+
+.containerFour{
+    width: 60%;
+    margin: 0 auto;
+    font-family:'microsoft Yahei';
+    font-size: 30px;
+}
+
+.containerFour .fourTop{
+    text-align: center;
+}
+
+.containerFour .fourTop .fourTop-line{
+    width: 80px;
+    background-color: green;
+    height: 5px;
+}
+
+.containerFour .fourMain{
+    font-size: 20px;
+    margin-top: 100px;
+    line-height: 80px;
+}
+
+.containerFour .fourMain .fourMain-two{
+    margin-left: 150px;
+}
+
+.containerFour .fourMain .fourMain-four{
+    margin-left: 230px;
+}
+
+.containerFive{
+    width: 100%;
+    height:400px;
+    margin-top: 60px;
+}
+

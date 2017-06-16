@@ -3,11 +3,46 @@
 <head>
     <meta charset="UTF-8">
     <title>新闻列表</title>
+    <link rel="stylesheet" type="text/css" href="../static/css/lib/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="../static/css/public.css">
+    <link rel="stylesheet" type="text/css" href="../static/css/index.css">
+    <script type="text/javascript" src="../static/js/lib/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="../static/js/lib/bootstrap.js"></script>
     <style type="text/css">
-        * {
+        body {
             margin: 0px auto;
             padding: 0px;
-            font-family: "微软雅黑"
+            font-family: "microsofe yahei";
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            -ms-box-sizing: border-box;
+            -o-box-sizing: border-box;
+            box-sizing: border-box;
+        }
+        .wrapper{
+            width: 80%;
+            margin: 20px auto;
+            font-family: "Microsoft Yahei", "微软雅黑", Arial, Helvetica, sans-serif;
+        }
+        .wrapper .titleC{
+            border-bottom: 2px solid black;
+        }
+        .wrapper .titleC .titleC-left{
+            width: 220px;
+            height: 60px;
+            background-color: green;
+            color:white;
+            font-size: 24px;
+            text-align: center;
+            line-height: 60px;
+            display: inline-block;
+        }
+        .wrapper .titleC .titleC-right{
+            display: inline-block;
+            position: relative;
+            float: right;
+            right: 20px;
+            line-height: 60px;
         }
 
         .b3 {
@@ -60,12 +95,19 @@
 
         #fy_xia:hover {
             cursor: pointer;
-            background-color: #FC6
+            background-color: #FC6；
         }
     </style>
     <script type="text/javascript" src="../static/js/lib/jquery-1.10.2.min.js"></script>
 </head>
 <body>
+<div class="top"></div>
+<div class="wrapper">
+    <div class="titleC">
+        <div class="titleC-left">新闻中心</div>
+        <div class="titleC-right">当前位置：网站首页 \ 新闻中心</div>
+    </div>
+</div>
 <!--分页开始-->
 <center>
     <div id="a22"></div>
@@ -164,6 +206,28 @@
             })
         }
     }
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="bottom"></div>
+<script type="text/javascript">
+    $(document).ready(function () {
+        $('.top').load('./top.html');
+        $('.bottom').load('./bottom.html');
+    });
 </script>
 </body>
 </html>
