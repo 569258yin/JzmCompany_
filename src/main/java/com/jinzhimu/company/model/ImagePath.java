@@ -1,8 +1,10 @@
 package com.jinzhimu.company.model;
 
+import com.jinzhimu.company.databean.HttpResult;
+
 import java.util.List;
 
-public class ImagePath extends HttpResult{
+public class ImagePath extends HttpResult {
 	private List<String> imageUrls;
 	
 	public ImagePath(String code, String message) {

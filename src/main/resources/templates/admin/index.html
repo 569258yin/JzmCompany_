@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <title>管理员界面</title>
@@ -17,39 +17,53 @@
 <body class="easyui-layout">
 
 <!-- 页面头部菜单 -->
-<div id="northTop" data-options="region:'north',title:'North Title',noheader:'true'" style="height:60px;background:url('../images/logo.png') no-repeat bottom left;">
+<div id="northTop" data-options="region:'north',title:'North Title',noheader:'true'"
+     style="height:60px;background:url('../images/logo.png') no-repeat bottom left;">
     <div id="topLinks" style="position: absolute;bottom: 2px;right:2px;border:0px solid red;width: 320px;">
-        <a href="javascript:void(0)" id="mb1" class="easyui-linkbutton" data-options="menu:'#main',iconCls:'house',plain:true">首页</a>
+        <a href="javascript:void(0)" id="mb1" class="easyui-linkbutton"
+           data-options="menu:'#main',iconCls:'house',plain:true">首页</a>
         <a href="javascript:void(0)" id="mb2" class="easyui-menubutton" data-options="menu:'#Info',iconCls:'user-gray'">个人中心</a>
-        <a href="javascript:void(0)" id="mb3" class="easyui-linkbutton" data-options="menu:'#logOut',iconCls:'application-go',plain:true">注销</a>
+        <a href="javascript:void(0)" id="mb3" class="easyui-linkbutton"
+           data-options="menu:'#logOut',iconCls:'application-go',plain:true">注销</a>
     </div>
     <div id="Info" class="menus" style="width:150px;">
         <div data-options="iconCls:'vcard'" id="mb5">个人信息维护</div>
-        <div data-options="iconCls:'lock-edit'"  id="mb6">修改登录密码</div>
+        <div data-options="iconCls:'lock-edit'" id="mb6">修改登录密码</div>
     </div>
 
     <div id="winInformation" style="display:none;">
         <img src="favicon.ico"/>
-        安阳工学院版<br>
-        &nbsp;&nbsp;&nbsp;Version: 5.6<br>
+        威海金子木渔具有限公司版<br>
+        &nbsp;&nbsp;&nbsp;Version: 1.0.0<br>
         &nbsp;&nbsp;&nbsp;Build id: 5-6-2017-05-10<br>
-        &nbsp;&nbsp;&nbsp;LiYongGang.  All rights reserved.<br>
-        &nbsp;&nbsp;&nbsp;Copyright  &copy; 2014 - 2017;
+        &nbsp;&nbsp;&nbsp;YH. All rights reserved.<br>
+        &nbsp;&nbsp;&nbsp;Copyright &copy; 2016 - 2017;
 
     </div>
 </div>
 
 
 <!-- 页面左部导航 -->
-<div id="westNav" data-options="region:'west',iconCls:'application-cascade',title:'功能导航',split:false" style="width:230px;">
+<div id="westNav" data-options="region:'west',iconCls:'application-cascade',title:'功能导航',split:false"
+     style="width:230px;">
     <div id="accordion" class="easyui-accordion" data-options="animate:true,fit:true,border:false">
         <div title="业务支持" data-options="iconCls:'application-side-tree',selected:true" style="padding:10px;">
-            <<p style="padding:5px;margin:0;">Select language:</p>
-            <ul>
-                <li><a href="javascript:void(0)" onclick="showcontent('java')"></a></li>
-                <li><a href="javascript:void(0)" onclick="showcontent('cshape')">C#</a></li>
-                <li><a href="javascript:void(0)" onclick="showcontent('vb')">VB</a></li>
-                <li><a href="javascript:void(0)" onclick="showcontent('erlang')">Erlang</a></li>
+            <p style="padding:5px;margin:0;"></p>
+            <ul class="easyui-tree">
+                <li>
+                    <span>新闻管理</span>
+                    <ul>
+                        <li><a href="javascript:void(0)" onclick="showcontent('addNews')">增加新闻</a></li>
+                        <li><a href="javascript:void(0)" onclick="showcontent('modifyNews')">修改新闻</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <span>产品管理</span>
+                    <ul>
+                        <li><a href="javascript:void(0)" onclick="showcontent('addGoods')">增加产品</a></li>
+                        <li><a href="javascript:void(0)" onclick="showcontent('modifyGoods')">修改产品</a></li>
+                    </ul>
+                </li>
             </ul>
         </div>
         <div title="常用工具" data-options="iconCls:'application-side-list'" style="padding:10px;">
@@ -67,14 +81,25 @@
 
 
 <!-- 页面底部声明 -->
-<div id="southbottom" data-options="region:'south',title:'South Title',noheader:'true'" style="height:50px;color: #4e5766">
+<div id="southbottom" data-options="region:'south',title:'South Title',noheader:'true'"
+     style="height:50px;color: #4e5766">
     <div class="copyright" style="text-align: center;"><br>
-        <a href="javascript:void(0)">反馈建议</a> | <a href="javascript:void(0)">官方微博</a> | <a href="javascript:void(0)">侵权投诉</a> |
+        <a href="javascript:void(0)">反馈建议</a> | <a href="javascript:void(0)">官方微博</a> | <a href="javascript:void(0)">侵权投诉</a>
+        |
         <a href="javascript:void(0)">Visual SiteBuilder</a>&nbsp;&nbsp;&nbsp;&nbsp;
         Copyright &copy; 2016 - 2017&nbsp;
         <a href="javascript:void(0)"> All Rights Reserved.</a>&nbsp;&nbsp;<a href="javascript:void(0)">威海金子木渔具有限公司</a>&nbsp;&nbsp;&nbsp;&nbsp;
-        建议使用 Chrome/Firefox  系列浏览器 1440*900屏幕分辨率
+        建议使用 Chrome/Firefox 系列浏览器 1440*900屏幕分辨率
     </div>
 </div>
+
+<script type="text/javascript">
+    function showcontent(page) {
+        $.get( page + ".html", null, function (data) {
+            $("#content").html(data);
+        });
+    }
+</script>
+
 </body>
 </html>

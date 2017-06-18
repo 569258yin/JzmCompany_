@@ -99,6 +99,12 @@
         }
     </style>
     <script type="text/javascript" src="../static/js/lib/jquery-1.10.2.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('.top').load('./top.html');
+            $('.bottom').load('./bottom.html');
+        });
+    </script>
 </head>
 <body>
 <div class="top"></div>
@@ -109,27 +115,32 @@
     </div>
 </div>
 <!--分页开始-->
+<!--分页开始-->
 <center>
-    <div id="a22"></div>
-    <ul class="pagination b3" id="fy_list">
+    <div id="news"></div>
+    <ul class="pagination b3" id="page_list">
     </ul>
-    <input type="hidden" value="1" id="fy_n"/>
+    <input type="hidden" value="1" id="inputPage"/>
 </center>
 <!--分页结束-->
 
+
+<div class="bottom"></div>
+
 <script type="text/javascript">
+    var pageSize = 2;
     //ajax分页开始
     $(document).ready(function (e) {
-        JiaZai();
-        var zys = 0;
+        getNews();
+        var totalPage = 0;
 //页面加载数据
     })
-    function JiaZai() {
-        var n = $("#fy_n").val();//页数显示框里面显示的页数
+    function getNews() {
+        var n = $("#inputPage").val();//页数显示框里面显示的页数
         n = n - 1;
         $.ajax({
             url: "/pageNews",
-            data: {pageNum: n, size: 2},//n是显示的页数。gjz是表格显示中有关键字查询，这里gjz传一个空值，意思是没有查询条件，查询所有的。
+            data: {pageNum: n, size: pageSize},//n是显示的页数。gjz是表格显示中有关键字查询，这里gjz传一个空值，意思是没有查询条件，查询所有的。
             type: "GET",
             dataType: "JSON",
             success: function (data) {
@@ -137,7 +148,7 @@
                 for (var i in data) {
                     s += "<a href =\"\\new?id="+ data[i].id + "\">"+ data[i].title +"</a><br>";
                 }
-                $("#a22").html(s);//把拼接好的字符串放到要显示的div里面。
+                $("#news").html(s);//把拼接好的字符串放到要显示的div里面。
             }
         });
 
@@ -148,86 +159,65 @@
             dataType: "TEXT",
             success: function (data) {
                 //总页数
-                var ys = Math.ceil(data / 2);
-                zys = ys;
-                var s = "<div><a id='fy_shang' class='b4'>上一页</a></div>";
-                var dangqian = $("#fy_n").val(); //当前页数
-                for (var i = dangqian - 2; i <= dangqian + 2; i++) {
-                    if (i > 0 && i <= ys) {
-                        if (dangqian == i) {
-                            s += "<div class='b4' class='active'><a class='fy_zhong b4'>" + i + "</a></div>";
+                var pageNums = Math.ceil(data / 2);
+                totalPage = pageNums;
+                var s = "<div><a id='previousPage' class='b4'>上一页</a></div>";
+                var currentPage = $("#inputPage").val(); //当前页数
+                for (var i = currentPage - 2; i <= currentPage + 2; i++) {
+                    if (i > 0 && i <= pageNums) {
+                        if (currentPage == i) {
+                            s += "<div class='b4' class='active'><a style='text-decoration-color: #1b1b1b' class='pageNum b4'>" + i + "</a></div>";
                         }
                         else {
-                            s += "<div class='b4'><a class='fy_zhong'>" + i + "</a></div>"
+                            s += "<div class='b4'><a class='pageNum'>" + i + "</a></div>"
                         }
                     }
                 }
-                s += "<div><a id='fy_xia' class='b4'>下一页</a></div>";
-                $("#fy_list").html(s);
+                s += "<div><a id='nextPage' class='b4'>下一页</a></div>";
+                $("#page_list").html(s);
 
                 //给分页列表加事件
-                JiaShiJian();
+                pageEvent();
             }
         })
         //给分页列表加事件的方法
-        function JiaShiJian() {
-            $("#fy_shang").click(function () {
-                var n = $("#fy_n").val();
+        function pageEvent() {
+            $("#previousPage").click(function () {
+                var n = $("#inputPage").val();
                 if (n > 1) {
                     n--;
                 }
                 else {
                     n = 1;
                 }
-                $("#fy_n").val(n);
+                $("#inputPage").val(n);
 
                 //加载数据
-                JiaZai();
+                getNews();
             })
-            $("#fy_xia").click(function () {
-                var n = $("#fy_n").val();
-                if (n < zys) {
+            $("#nextPage").click(function () {
+                var n = $("#inputPage").val();
+                if (n < totalPage) {
                     n++;
                 }
                 else {
-                    n = zys;
+                    n = totalPage;
                 }
-                $("#fy_n").val(n);
+                $("#inputPage").val(n);
 
                 //加载数据
-                JiaZai();
+                getNews();
             })
-            $(".fy_zhong").click(function () {
+            $(".pageNum").click(function () {
                 var n = $(this).text();
-                $("#fy_n").val(n);
+                $("#inputPage").val(n);
 
                 //加载数据
-                JiaZai();
+                getNews();
             })
         }
     }
 </script>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<div class="bottom"></div>
-<script type="text/javascript">
-    $(document).ready(function () {
-        $('.top').load('./top.html');
-        $('.bottom').load('./bottom.html');
-    });
-</script>
 </body>
 </html>

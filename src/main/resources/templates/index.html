@@ -8,6 +8,12 @@
     <link rel="stylesheet" type="text/css" href="../static/css/index.css">
     <script type="text/javascript" src="../static/js/lib/jquery-3.2.1.min.js"></script>
     <script type="text/javascript" src="../static/js/lib/bootstrap.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('.top').load('./top.html');
+            $('.bottom').load('./bottom.html');
+        });
+    </script>
 </head>
 <body>
     <div class="top"></div>
@@ -36,6 +42,9 @@
                 </div>
                 <div class="twoTop-chinese">
                     产品展示
+                </div>
+                <div>
+
                 </div>
             </div>
         </div>
@@ -94,12 +103,7 @@
 
     <div class="bottom"></div>
 
-    <script type="text/javascript">
-        $(document).ready(function () {
-            $('.top').load('./top.html');
-            $('.bottom').load('./bottom.html');
-        });
-    </script>
+
 
 </body>
 </html>

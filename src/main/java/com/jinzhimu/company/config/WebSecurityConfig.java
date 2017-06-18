@@ -47,6 +47,8 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
                 .logoutUrl("/logout")
                 //设置注销成功后跳转页面，默认是跳转到登录页面
                 .logoutSuccessUrl("/index")
-                .permitAll();
+                .permitAll()
+                .and()
+                .csrf().disable();
     }
 }

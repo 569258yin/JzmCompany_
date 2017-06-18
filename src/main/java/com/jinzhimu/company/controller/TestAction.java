@@ -9,6 +9,7 @@ import javax.servlet.http.HttpServletResponse;
 
 import com.jinzhimu.company.model.Msg;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.web.csrf.CsrfFilter;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.ui.ModelMap;
@@ -48,18 +49,7 @@ public class TestAction {
         return mv;
     }
 
-    @PostMapping("/sendNews")
-    public void sendNews(HttpServletRequest request, HttpServletResponse response) throws IOException {
-        String text = (String) request.getParameter("text") + "";
-        News news = new News("测试", text, "威海金之木", "威海金子木", new Date(), 0);
-        News n = newsRepository.save(news);
-        if (n != null) {
-            response.getWriter().write("SUCCESS");
-        } else {
-            response.getWriter().write("Error");
-        }
 
-    }
 
     @GetMapping("/getAllNews")
     public void getAllNews(HttpServletRequest request, HttpServletResponse response) throws IOException {

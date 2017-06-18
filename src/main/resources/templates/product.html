@@ -9,8 +9,8 @@
     <script type="text/javascript" src="../static/js/lib/jquery-3.2.1.min.js"></script>
     <script type="text/javascript" src="../static/js/lib/bootstrap.js"></script>
     <style type="text/css">
-        body{
-            padding:0;
+        body {
+            padding: 0;
             margin: 0;
             -webkit-box-sizing: border-box;
             -moz-box-sizing: border-box;
@@ -18,25 +18,29 @@
             -o-box-sizing: border-box;
             box-sizing: border-box;
         }
-        .wrapper{
+
+        .wrapper {
             width: 80%;
             margin: 20px auto;
             font-family: "Microsoft Yahei", "微软雅黑", Arial, Helvetica, sans-serif;
         }
-        .wrapper .titleC{
+
+        .wrapper .titleC {
             border-bottom: 2px solid black;
         }
-        .wrapper .titleC .titleC-left{
+
+        .wrapper .titleC .titleC-left {
             width: 220px;
             height: 60px;
             background-color: green;
-            color:white;
+            color: white;
             font-size: 24px;
             text-align: center;
             line-height: 60px;
             display: inline-block;
         }
-        .wrapper .titleC .titleC-right{
+
+        .wrapper .titleC .titleC-right {
             display: inline-block;
             position: relative;
             float: right;
@@ -44,43 +48,29 @@
             line-height: 60px;
         }
     </style>
-    </head>
-    <body>
-    <div class="top"></div>
-    <div class="wrapper">
-        <div class="titleC">
-            <div class="titleC-left">产品展示</div>
-            <div class="titleC-right">当前位置：网站首页 \ 产品展示</div>
-        </div><br><br><br><br><br><br><br><br><br>
 
-        <!--从这里开始你的表演-->
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    </div>
-<div class="bottom"></div>
     <script type="text/javascript">
         $(document).ready(function () {
             $('.top').load('./top.html');
             $('.bottom').load('./bottom.html');
         });
     </script>
-    </body>
-      </html>
+
+</head>
+<body>
+<div class="top"></div>
+<div class="wrapper">
+    <div class="titleC">
+        <div class="titleC-left">产品展示</div>
+        <div class="titleC-right">当前位置：网站首页 \ 产品展示</div>
+    </div>
+    <br><br><br><br><br><br><br><br><br>
+
+    <!--从这里开始你的表演-->
+
+
+</div>
+<div class="bottom"></div>
+
+</body>
+</html>
